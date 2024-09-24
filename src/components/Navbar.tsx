@@ -4,15 +4,11 @@ import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
-interface Props {
-  onSearch: (searchText: string) => void;
-}
-
-const Navbar = ({ onSearch }: Props) => {
+const Navbar = () => {
   return (
     <HStack padding="10px">
       <Image src={logo} boxSize="60px" />
-      <SearchInput onSearch={onSearch} />
+      <SearchInput />
       <HStack>
         <MdLightMode fontSize="20px" />
         <ColorModeSwitch />
