@@ -3,11 +3,14 @@ import logo from "../assets/logo.webp";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <HStack padding="10px">
-      <Image src={logo} boxSize="60px" />
+      <Link to="/">
+        <Image src={logo} boxSize="60px" objectFit="cover" />
+      </Link>
       <SearchInput />
       <HStack>
         <MdLightMode fontSize="20px" />
