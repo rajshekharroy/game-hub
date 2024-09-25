@@ -9,8 +9,6 @@ const HomePage = () => {
   return (
     <Grid
       templateAreas={{
-        // base: `'nav' 'main'`,
-        // lg: `'nav nav' 'aside main'`,
         base: `'main'`,
         lg: `'aside main'`,
       }}
@@ -18,6 +16,7 @@ const HomePage = () => {
         base: "1fr",
         lg: "200px 1fr",
       }}
+      boxSizing="border-box"
     >
       <Show above="lg">
         <GridItem area="aside" paddingX={5}>
@@ -27,7 +26,7 @@ const HomePage = () => {
       <GridItem area="main">
         <Box paddingLeft={2}>
           <GameHeading />
-          <HStack spacing={5} marginBottom={5}>
+          <HStack spacing={3} marginBottom={5}>
             <PlatformSelector />
             <SortSelector />
           </HStack>
